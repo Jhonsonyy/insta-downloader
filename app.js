@@ -29,6 +29,12 @@ app.post('/download', async (req, res) => {
         res.setHeader('Content-Disposition', 'attachment; filename=InstaGrabX_video.mp4');
         res.setHeader('Content-Type', 'video/mp4');
         response.data.pipe(res); // Pipe the response data to the client's response
+        response.data.on('error', (err) => {
+        // Handle the error, e.g., send an error response to the client
+        console.error('Error while streaming data:', err);
+        res.setHeader('Content-Length', response.headers['content-length']);
+        res.status(500).send('Internal Server Error');
+});
     } else {
         res.status(404).send("No data found.");
     }
