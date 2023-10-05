@@ -33,9 +33,7 @@ app.post('/download', async (req, res) => {
         res.status(404).send("No data found.");
     }
   }
-  else{
-    res.send("incorrect url")
-  }
+
 });
 
 
