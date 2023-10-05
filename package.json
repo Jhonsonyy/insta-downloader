@@ -1,0 +1,29 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maaz Haider",
+  "license": "ISC",
+  "dependencies": {
+    "@sasmeee/igdl": "^1.0.0",
+    "@xaviabot/fb-downloader": "^1.0.14",
+    "@xncn/instagramdownloaderpro": "^0.0.3",
+    "axios": "^1.5.0",
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.18.2",
+    "fb-downloader": "^1.0.3",
+    "fb-video-downloader": "^1.0.3",
+    "fbdl-core": "^1.0.2",
+    "hbs": "^4.2.0",
+    "insta-dl": "^1.0.2",
+    "insta-spider": "^1.0.2",
+    "mongodb": "^5.7.0",
+    "ses": "^0.18.8",
+    "socket.io": "^4.7.2",
+    "yuomi": "^1.0.5"
+  }
+}
