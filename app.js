@@ -17,6 +17,7 @@ app.use(express.static(dir));
 app.post('/download', async (req, res) => {
   const global_link = req.body.url
   if(global_link != "" && global_link.includes("instagram")){
+    res.send("File is downloading...")
     const download_obj = await instagramDl(global_link);
     const download_Link = download_obj[0].download_link;
 
