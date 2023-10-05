@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 
-const dir = path.join(__dirname, '..', 'public');
+const dir = path.join(__dirname, 'public');
 console.log(dir);
 
 
