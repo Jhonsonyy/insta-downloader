@@ -8,7 +8,6 @@ const port = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 
 const dir = path.join(__dirname, 'public');
-console.log(dir);
 
 
 app.use(express.static(dir));
@@ -40,7 +39,7 @@ app.post('/download', async (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+
 });
 
 
