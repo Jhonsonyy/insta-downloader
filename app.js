@@ -20,17 +20,24 @@ app.post('/download', async (req, res) => {
     try {
       const download_obj = await instagramDl(global_link);
       const download_Link = download_obj[0].download_link;
-      await wait(8);
       // Use axios to download the video
       const response = await axios.get(download_Link, { responseType: 'stream' });
 
       // Set the appropriate headers for the file download
+      function delayFiveSeconds() {
+  setTimeout(() => {
+    console.log('5 seconds have passed.');
       res.setHeader('Content-Disposition', 'attachment; filename=InstaGrabX_video.mp4');
       res.setHeader('Content-Type', 'video/mp4');
      res.setHeader('Content-Length', response.headers['content-length']);
       
       // Pipe the response data to the client's response
       response.data.pipe(res);
+  }, 5000); 
+}
+delayFiveSeconds();
+
+// Call the function to start the 5-second timer
     } catch (error) {
       res.status(500).send('Error downloading video.');
     }
