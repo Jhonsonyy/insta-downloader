@@ -24,17 +24,14 @@ app.post('/download', async (req, res) => {
       const response = await axios.get(download_Link, { responseType: 'stream' });
 
       // Set the appropriate headers for the file download
-      function delayFiveSeconds() {
-  setTimeout(() => {
       res.setHeader('Content-Disposition', 'attachment; filename=InstaGrabX_video.mp4');
       res.setHeader('Content-Type', 'video/mp4');
      res.setHeader('Content-Length', response.headers['content-length']);
       
       // Pipe the response data to the client's response
       response.data.pipe(res);
-  }, 3000); 
-}
-delayFiveSeconds();
+
+
 
 // Call the function to start the 5-second timer
     } catch (error) {
