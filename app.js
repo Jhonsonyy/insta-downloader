@@ -21,7 +21,7 @@ app.post('/download', async (req, res) => {
       const download_obj = await instagramDl(global_link);
       console.log(download_obj)
       const download_Link = download_obj[0].download_link;
-
+      await wait(5);
       // Use axios to download the video
       const response = await axios.get(download_Link, { responseType: 'stream' });
 
