@@ -26,14 +26,13 @@ app.post('/download', async (req, res) => {
       // Set the appropriate headers for the file download
       function delayFiveSeconds() {
   setTimeout(() => {
-    console.log('5 seconds have passed.');
       res.setHeader('Content-Disposition', 'attachment; filename=InstaGrabX_video.mp4');
       res.setHeader('Content-Type', 'video/mp4');
      res.setHeader('Content-Length', response.headers['content-length']);
       
       // Pipe the response data to the client's response
       response.data.pipe(res);
-  }, 5000); 
+  }, 3000); 
 }
 delayFiveSeconds();
 
