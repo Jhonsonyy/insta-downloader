@@ -27,12 +27,9 @@ app.get("/dload", async (req, res) => {
 })
 
 app.get('/object_grab', async (req, res) => {
-  let inputValue = getdata.key;
-  if (getdata.key !== '' && inputValue.includes('instagram')) {
     const download_obj = await instagramDl(getdata.key)
     final_obj = download_obj[0]
     res.send(final_obj)
-  }
 
 })
 
