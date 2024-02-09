@@ -19,6 +19,7 @@ app.use(express.static(dir));
 
 app.post('/downloadpage', async (req, res) => {
   getdata = req.body;
+  console.log(getdata.key)
 })
 
 const location = path.join(__dirname, "public/dload.html")
