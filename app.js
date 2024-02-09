@@ -21,6 +21,11 @@ app.post('/downloadpage', async (req, res) => {
   getdata = req.body;
 })
 
+const location = path.join(__dirname, "public/dload.html")
+app.get("/dload", async (req, res) => {
+  res.sendFile(location)
+})
+
 app.get('/object_grab', async (req, res) => {
   if (getdata.key !== '' && getdata.key.includes('instagram')) {
     const download_obj = await instagramDl(getdata.key)
@@ -35,3 +40,5 @@ app.get('/object_grab', async (req, res) => {
 app.listen(port, () => {
   console.log("running on port: ", port)
 });
+
+
