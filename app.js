@@ -42,7 +42,7 @@ app.get('/object_grab', async (req, res) => {
 
 
 
-app.listen(port, '169.254.83.221', () => {
+app.listen(port, () => {
   console.log("running on port: ", port)
 });
 
