@@ -26,17 +26,14 @@ app.use(express.static(dir));
 app.post('/downloadpage', async (req, res) => {
   getdata = req.body;
   console.log(getdata.key)
+  res.send("got it")
 })
 
-const location = path.join(__dirname, "public/dload.html")
-app.get("/dload", async (req, res) => {
-  res.sendFile(location)
-})
 
 app.get('/object_grab', async (req, res) => {
     const download_obj = await instagramDl(getdata.key)
     final_obj = download_obj[0]
-    res.send(final_obj)
+    res.json(final_obj)
 
 })
 
