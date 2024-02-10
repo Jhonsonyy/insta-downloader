@@ -526,12 +526,12 @@
   .then(data => {
     // Handle the JSON response
     console.log(data);
-    window.location = "dload.html"
   })
   .catch(error => {
     // Handle any errors
     console.error('Fetch error:', error);
   });
+        window.location.href = 'dload.html'
         console.log("true");
         loader.style.display = "block";
         setTimeout(() => {
