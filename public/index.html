@@ -303,7 +303,7 @@
   <div class="upper-container">
     <span class="heading display-3">Instagram Reel Downloader</span>
     <span class="sub-heading">Download Reels from Instagram with InstagrabX</span>
-    <form id="firstcontainer" action="/dload" method="#" class="downloadsection">
+    <form id="firstcontainer" action="#" method="#" class="downloadsection">
       <input type="text" id="url-input" placeholder="Past Instagram URL" autocapitalize="off"
         autocomplete="off">
       <input type="submit" value="Download" id="download-Btn">
@@ -526,6 +526,7 @@
   .then(data => {
     // Handle the JSON response
     console.log(data);
+    window.location = "dload.html"
   })
   .catch(error => {
     // Handle any errors
