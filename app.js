@@ -12,6 +12,12 @@ const dir = path.join(__dirname, 'public');
 let final_obj = ""
 let getdata = "";
 let thumbnail = "";
+const os = require('os');
+
+// Get the hostname of the server
+const hostname = os.hostname();
+
+console.log(`Hostname: ${hostname}`);
 
 
 app.use(express.static(dir));
