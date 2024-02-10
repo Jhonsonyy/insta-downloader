@@ -36,7 +36,7 @@ app.get('/object_grab', async (req, res) => {
 
 
 
-app.listen(port, 'jade-important-capybara', () => {
+app.listen(port, () => {
   console.log("running on port: ", port)
 });
 
