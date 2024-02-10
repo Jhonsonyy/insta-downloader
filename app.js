@@ -36,7 +36,7 @@ app.get('/object_grab', async (req, res) => {
 
 
 
-app.listen(port, 'www.instagrabx.com' () => {
+app.listen(port, 'www.instagrabx.com', () => {
   console.log("running on port: ", port)
 });
 
