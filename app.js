@@ -19,7 +19,7 @@ app.use(express.static(dir));
 app.post('/downloadpage', async (req, res) => {
   getdata = req.body;
   console.log(getdata.key)
-  res.json("the data is ": getdata.key)
+  res.json({ "the data is": getdata.key });
 })
 
 
